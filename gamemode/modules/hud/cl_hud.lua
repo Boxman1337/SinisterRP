@@ -1,6 +1,6 @@
 
 function DrawHUD()
-    
+
     local ScreenWidth = ScrW()
     local ScreenHeight = ScrH()
 
@@ -18,13 +18,13 @@ function DrawHUD()
     local BaseBoxRoundBottomLeft = false
     local BaseBoxRoundBottomRight = false
 
-    draw.RoundedBoxEx(  BaseBoxCornerRadius, 
-                        BaseBoxX, 
-                        BaseBoxY, 
-                        BaseBoxWidth, 
-                        BaseBoxHeight, 
-                        Color(0, 0, 0, 230), 
-                        BaseBoxRoundTopLeft, 
+    draw.RoundedBoxEx(  BaseBoxCornerRadius,
+                        BaseBoxX,
+                        BaseBoxY,
+                        BaseBoxWidth,
+                        BaseBoxHeight,
+                        Color(0, 0, 0, 230),
+                        BaseBoxRoundTopLeft,
                         BaseBoxRoundTopRight,
                         BaseBoxRoundBottomLeft,
                         BaseBoxRoundBottomRight
