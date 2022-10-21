@@ -1,0 +1,16 @@
+"sinisterrp" 
+{
+    "base"              "sandbox"
+    "title"             "SinisterRP"
+    "version"           "1.0.0"
+    "category"          "rp"
+    "menusystem"        "1"
+
+    "author_name"       "Boxman1337"
+    "author_email"      ""
+    "author_url"        "https://github.com/Boxman1337/SinisterRP"
+
+    "icon"              ""
+    "info"              ""
+    "hide"              "0"
+}
