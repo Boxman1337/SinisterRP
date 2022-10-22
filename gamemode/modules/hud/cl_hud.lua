@@ -1,34 +1,33 @@
 
+
 function DrawHUD()
 
-    local ScreenWidth = ScrW()
-    local ScreenHeight = ScrH()
+    local screenWidth = ScrW()
+    local screenHeight = ScrH()
 
-    local ScreenCenterpointWidth = ScreenWidth / 2
+    local mainInterfaceBoxWidth = 600
+    local mainInterfaceBoxHeight = 120
 
-    local BaseBoxWidth = 600
-    local BaseBoxHeight = 90
-    local BaseBoxX = ScreenCenterpointWidth - BaseBoxWidth / 2
-    local BaseBoxY = ScreenHeight - BaseBoxHeight
+    local mainInterfaceCenterPoint = screenWidth / 2 - mainInterfaceBoxWidth / 2
+    local mainInterfaceBottomPlacement = screenHeight - mainInterfaceBoxHeight
 
-    local BaseBoxCornerRadius = 25
-
-    local BaseBoxRoundTopLeft = true
-    local BaseBoxRoundTopRight = true
-    local BaseBoxRoundBottomLeft = false
-    local BaseBoxRoundBottomRight = false
-
-    draw.RoundedBoxEx(  BaseBoxCornerRadius,
-                        BaseBoxX,
-                        BaseBoxY,
-                        BaseBoxWidth,
-                        BaseBoxHeight,
-                        Color(0, 0, 0, 230),
-                        BaseBoxRoundTopLeft,
-                        BaseBoxRoundTopRight,
-                        BaseBoxRoundBottomLeft,
-                        BaseBoxRoundBottomRight
+    draw.RoundedBoxEx(  20,
+                        mainInterfaceCenterPoint,
+                        mainInterfaceBottomPlacement,
+                        mainInterfaceBoxWidth,
+                        mainInterfaceBoxHeight,
+                        Color(40, 40, 40, 150),
+                        true,
+                        true,
+                        false,
+                        false
                     )
+
+    local Mat = Material("hud/Resourcebar.png", vertexlitgeneric)
+
+    surface.SetMaterial(Mat)
+    surface.SetDrawColor(225, 20, 20, 255)
+    surface.DrawTexturedRect(mainInterfaceCenterPoint + 20, mainInterfaceBottomPlacement + 25, 560, 36)
 
 end
 

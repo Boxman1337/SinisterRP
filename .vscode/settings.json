@@ -4,6 +4,11 @@
         "ScrW",
         "ScrH",
         "hook",
-        "Color"
+        "Color",
+        "vgui",
+        "Material",
+        "surface",
+        "AddCSLuaFile",
+        "include"
     ]
 }
