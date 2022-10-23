@@ -36,6 +36,8 @@ function DrawHUD()
     local currentHealthRatio = currentHealth / maxHealth
     local currentArmorRatio = currentArmor / maxArmor
 
+    -- Falling in Resourcebar formula: screenCenter - 55 + (screenCenter - mainInterfaceBottomPlacement + 55) * (1 - currentHealthRatio)
+
     local mainInterfaceHealthBar = {
         { x = mainInterfaceCenterPoint + 50, y = mainInterfaceBottomPlacement + 32},
         { x = mainInterfaceCenterPoint + 550, y = mainInterfaceBottomPlacement + 32},
@@ -44,10 +46,10 @@ function DrawHUD()
     }
 
     local mainInterfaceCurrentHealth = {
-        { x = mainInterfaceCenterPoint + 55 + (screenCenter - mainInterfaceBoxWidth / 2 + 55) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 35},
-        { x = mainInterfaceCenterPoint + 545, y = mainInterfaceBottomPlacement + 35},
-        { x = mainInterfaceCenterPoint + 565, y = mainInterfaceBottomPlacement + 57},
-        { x = mainInterfaceCenterPoint + 35 + (screenCenter - mainInterfaceBoxWidth / 2 + 55) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 57}
+        { x = screenCenter - 245 + (screenCenter - mainInterfaceBottomPlacement + 245) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 35},
+        { x = screenCenter + 245 + (mainInterfaceBottomPlacement - 245 - screenCenter) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 35},
+        { x = screenCenter + 265 + (mainInterfaceBottomPlacement - 265 - screenCenter) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 57},
+        { x = screenCenter - 265 + (screenCenter - mainInterfaceBottomPlacement + 265) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 57}
     }
 
     local mainInterfaceArmorBar = {
