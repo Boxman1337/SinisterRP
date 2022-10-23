@@ -60,10 +60,10 @@ function DrawHUD()
     }
 
     local mainInterfaceCurrentArmor = {
-        { x = mainInterfaceCenterPoint + 35, y = mainInterfaceBottomPlacement + 69},
-        { x = mainInterfaceCenterPoint + 565, y = mainInterfaceBottomPlacement + 69},
-        { x = mainInterfaceCenterPoint + 545, y = mainInterfaceBottomPlacement + 82},
-        { x = mainInterfaceCenterPoint + 55, y = mainInterfaceBottomPlacement + 82}
+        { x = screenCenter - 245 + (screenCenter - mainInterfaceBottomPlacement + 245) * (1 - currentArmorRatio), y = mainInterfaceBottomPlacement + 69},
+        { x = screenCenter + 245 + (mainInterfaceBottomPlacement - 245 - screenCenter) * (1 - currentArmorRatio), y = mainInterfaceBottomPlacement + 69},
+        { x = screenCenter + 265 + (mainInterfaceBottomPlacement - 265 - screenCenter) * (1 - currentArmorRatio), y = mainInterfaceBottomPlacement + 82},
+        { x = screenCenter - 265 + (screenCenter - mainInterfaceBottomPlacement + 265) * (1 - currentArmorRatio), y = mainInterfaceBottomPlacement + 82}
     }
 
     surface.SetDrawColor(120, 120, 120, 60)
