@@ -1,7 +1,7 @@
 
 -- HideHUD hides all elements of the default Gmod HUD
 function HideHUD(name)
-    for k, v in pairs({ "CHudHealth", "CHudBattery", "CHudAmmo", "CHudSecondaryAmmo" }) do
+    for k, v in pairs({ "CHudHealth", "CHudBattery" }) do
         if name == v then
             return false
         end
