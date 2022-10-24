@@ -1,4 +1,5 @@
 
+-- HideHUD hides all elements of the default Gmod HUD
 function HideHUD(name)
     for k, v in pairs({ "CHudHealth", "CHudBattery", "CHudAmmo", "CHudSecondaryAmmo" }) do
         if name == v then
@@ -8,7 +9,7 @@ function HideHUD(name)
 end
 hook.Add("HUDShouldDraw", "HideDefaultHUD", HideHUD)
 
-
+-- DrawHUD draws our custom HUD on the screen
 function DrawHUD()
 
     local client = LocalPlayer()
@@ -83,6 +84,9 @@ function DrawHUD()
 
     surface.SetDrawColor(0, 120, 200, 200)
     surface.DrawPoly(mainInterfaceCurrentArmor)
+
+    draw.SimpleText(currentHealth .. " HP", "DermaDefaultBold", screenCenter - 15, mainInterfaceBottomPlacement + 40, Color(255, 255, 255, 255))
+    draw.SimpleText(currentArmor .. " Armor", "DermaDefaultBold", screenCenter - 20, mainInterfaceBottomPlacement + 67, Color(255, 255, 255, 255))
 
     --[[
 
