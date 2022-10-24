@@ -88,15 +88,6 @@ function DrawHUD()
     draw.SimpleText(currentHealth .. " HP", "DermaDefaultBold", screenCenter - 15, mainInterfaceBottomPlacement + 40, Color(255, 255, 255, 255))
     draw.SimpleText(currentArmor .. " Armor", "DermaDefaultBold", screenCenter - 20, mainInterfaceBottomPlacement + 67, Color(255, 255, 255, 255))
 
-    --[[
-
-    local Mat = Material("hud/Resourcebar.png", vertexlitgeneric)
-
-    surface.SetMaterial(Mat)
-    surface.SetDrawColor(225, 20, 20, 255)
-    surface.DrawTexturedRect(mainInterfaceCenterPoint + 20, mainInterfaceBottomPlacement + 25, 560, 36)
-
-    ]]--
 end
 
 hook.Add("HUDPaint", "DrawHUD", DrawHUD)
