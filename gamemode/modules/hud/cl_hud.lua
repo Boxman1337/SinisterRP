@@ -1,4 +1,13 @@
 
+function HideHUD(name)
+    for k, v in pairs({ "CHudHealth", "CHudBattery", "CHudAmmo", "CHudSecondaryAmmo" }) do
+        if name == v then
+            return false
+        end
+    end
+end
+hook.Add("HUDShouldDraw", "HideDefaultHUD", HideHUD)
+
 
 function DrawHUD()
 
@@ -20,7 +29,7 @@ function DrawHUD()
                         mainInterfaceBottomPlacement,
                         mainInterfaceBoxWidth,
                         mainInterfaceBoxHeight,
-                        Color(40, 40, 40, 150),
+                        Color(40, 40, 40, 230),
                         true,
                         true,
                         false,
@@ -87,3 +96,4 @@ function DrawHUD()
 end
 
 hook.Add("HUDPaint", "DrawHUD", DrawHUD)
+
