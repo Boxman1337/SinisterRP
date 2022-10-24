@@ -11,6 +11,8 @@
         "AddCSLuaFile",
         "include",
         "vertexlitgeneric",
-        "LocalPlayer"
+        "LocalPlayer",
+        "GM",
+        "DeriveGamemode"
     ]
 }
