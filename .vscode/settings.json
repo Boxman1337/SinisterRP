@@ -13,6 +13,7 @@
         "vertexlitgeneric",
         "LocalPlayer",
         "GM",
-        "DeriveGamemode"
+        "DeriveGamemode",
+        "mysqloo"
     ]
 }

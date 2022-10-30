@@ -88,6 +88,8 @@ function DrawHUD()
     draw.SimpleText(currentHealth .. " HP", "DermaDefaultBold", screenCenter - 15, mainInterfaceBottomPlacement + 40, Color(255, 255, 255, 255))
     draw.SimpleText(currentArmor .. " Armor", "DermaDefaultBold", screenCenter - 20, mainInterfaceBottomPlacement + 67, Color(255, 255, 255, 255))
 
+    draw.SimpleText("$" .. "CURMONEY", "DermaDefaultBold", screenCenter + 150, mainInterfaceBottomPlacement + 95, Color(40, 200, 40, 255))
+
 end
 
 hook.Add("HUDPaint", "DrawHUD", DrawHUD)
