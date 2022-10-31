@@ -15,6 +15,8 @@
         "GM",
         "DeriveGamemode",
         "mysqloo",
-        "PrintTable"
+        "PrintTable",
+        "KEY_F4",
+        "IsValid"
     ]
 }
