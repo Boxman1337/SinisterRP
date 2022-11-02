@@ -53,18 +53,18 @@ function DrawHUD()
         { x = mainInterfaceCenterPoint + 25 , y = mainInterfaceBottomPlacement + 60}
     }
 
-    local mainInterfaceCurrentHealth = {
-        { x = screenCenter - 245 + (screenCenter - mainInterfaceBottomPlacement + 245) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 35},
-        { x = screenCenter + 245 + (mainInterfaceBottomPlacement - 245 - screenCenter) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 35},
-        { x = screenCenter + 265 + (mainInterfaceBottomPlacement - 265 - screenCenter) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 57},
-        { x = screenCenter - 265 + (screenCenter - mainInterfaceBottomPlacement + 265) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 57}
-    }
-
     local mainInterfaceArmorBar = {
         { x = mainInterfaceCenterPoint + 25, y = mainInterfaceBottomPlacement + 66},
         { x = mainInterfaceCenterPoint + 575, y = mainInterfaceBottomPlacement + 66},
         { x = mainInterfaceCenterPoint + 550, y = mainInterfaceBottomPlacement + 85},
         { x = mainInterfaceCenterPoint + 50, y = mainInterfaceBottomPlacement + 85}
+    }
+
+    local mainInterfaceCurrentHealth = {
+        { x = screenCenter - 245 + (screenCenter - mainInterfaceBottomPlacement + 245) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 35},
+        { x = screenCenter + 245 + (mainInterfaceBottomPlacement - 245 - screenCenter) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 35},
+        { x = screenCenter + 265 + (mainInterfaceBottomPlacement - 265 - screenCenter) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 57},
+        { x = screenCenter - 265 + (screenCenter - mainInterfaceBottomPlacement + 265) * (1 - currentHealthRatio), y = mainInterfaceBottomPlacement + 57}
     }
 
     local mainInterfaceCurrentArmor = {
