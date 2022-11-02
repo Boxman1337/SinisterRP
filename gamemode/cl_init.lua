@@ -1,6 +1,11 @@
+GM.Name = "SinisterRP"
+GM.Author = "Boxman1337"
+GM.Email = "N/A"
+GM.Website = "N/A"
 
--- Specifies standard .lua files to be loaded by the clients
-include("shared.lua")
+-- Specifies which gamemode to derive from
+
+DeriveGamemode("sandbox")
 
 -- Specifies module .lua files to be loaded by the clients
 
